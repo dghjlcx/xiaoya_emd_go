@@ -743,7 +743,26 @@ func handleRefreshLocal(w http.ResponseWriter, r *http.Request) {
 func scanLocalFiles(mediaDir, dbPath string) error {
 	// 定义需要跳过的字幕文件扩展名
 	skipExtensions := map[string]struct{}{
-		".srt": {}, ".ass": {}, ".vtt": {}, ".sub": {},
+		".ass":  {},
+		".srt":  {},
+		".sub":  {},
+		".ssa":  {},
+		".vtt":  {},
+		".smi":  {},
+		".sami": {},
+		".ttml": {},
+		".sbv":  {},
+		".idx":  {},
+		".sup":  {},
+		".lrc":  {},
+		".scc":  {},
+		".rt":   {},
+		".stl":  {},
+		".aqt":  {},
+		".jss":  {},
+		".psb":  {},
+		".ssf":  {},
+		".mpl":  {},
 	}
 
 	// 检查数据库是否存在
